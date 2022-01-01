@@ -112,7 +112,7 @@ async def play(_, message: Message):
     global que
     global useer
 
-    lel = await message.reply("**🔄 ᴘʀᴏᴄᴇꜱꜱɪɴɢ...**")
+    lel = await message.reply("**🔄جــاري البـحث عـزيـزي..**")
 
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -150,14 +150,14 @@ async def play(_, message: Message):
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>ᴀꜱꜱɪꜱᴛᴀɴᴛ ꜰᴀɪʟᴇᴅ ᴛᴏ \n ᴊᴏɪɴ ᴛʜɪꜱ ᴄʜᴀᴛ..."
+                        f"<b>فشـل انضـمام الحسـاب المسـاعد  \n لهـذه الدردشه..."
                     )
     try:
         await USER.get_chat(chid)
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"**ᴀꜱꜱɪꜱᴛᴀɴᴛ ɴᴏᴛ ᴛᴏ ᴊᴏɪɴ \n ᴛʜɪꜱ ᴄʜᴀᴛ...**"
+            f"** الحسـاب المسـاعد لم ينـضم بعد \n جـرب اضـافته يـدويا...**"
         )
         return
 
