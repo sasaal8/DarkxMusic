@@ -21,9 +21,9 @@ from yt_dlp.utils import (
 )
 
 
-@Client.on_message(filters.command("song") & ~filters.edited)
+@Client.on_message(filters.command("song","بحث") & ~filters.edited)
 async def song(client, message):
-    cap = "**ꜱᴏɴɢ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ꜱᴜᴍɪᴛ ʏᴀᴅᴀᴠ...**"
+    cap = "**جـاري التحميل...**"
     url = message.text.split(None, 1)[1]
     rkp = await message.reply("**🎧...**")
     if not url:
@@ -35,7 +35,7 @@ async def song(client, message):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await rkp.edit("**❌ ꜱᴏɴɢ ɴᴏᴛ ꜰᴏᴜɴᴅ...**")
+        return await rkp.edit("**لـم يتم العثور علي شئ...**")
     type = "audio"
     if type == "audio":
         opts = {
