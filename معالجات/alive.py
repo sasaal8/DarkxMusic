@@ -57,7 +57,7 @@ async def start_(client: Client, message: Message):
     )
     
     
-@Client.on_message(commandpro(["/start", "سورس", "السورس"]) & filters.group & ~filters.edited)
+@Client.on_message(commandpro(["/start", "سورس" ,"السورس"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/f3093920ea300f8851389.jpg",
@@ -73,7 +73,7 @@ async def start(client: Client, message: Message):
     )
 
 
-@Client.on_message(commandpro(["المطور","مطور", "سافو ميوزك", "مطوري", "يا سورس","سافو"]) & filters.group & ~filters.edited)
+@Client.on_message(commandpro(["المطور" ,"مطور" ,"سافو ميوزك" ,"مطوري" ,"يا سورس" ,"سافو"]) & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/31a1aaad8469d8bdb2380.jpg",
